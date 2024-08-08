@@ -122,6 +122,7 @@ float kalmanX(float ay, float az, float gx) {
   K[0] = P[0][0] / S;
   K[1] = P[1][0] / S;
 
+  // Update step
   float y = newAngle - angle; // determine error between accel estimate and gyro estimate
 
   angle += K[0] * y;
